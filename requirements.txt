@@ -1,1 +1,1 @@
-pygame
+pygame and Visual Studio Code with python 3.8 or higher
