@@ -35,7 +35,7 @@ RED_HIT = pygame.USEREVENT + 2
 YELLOW_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Assets', 'J-10.png'))
 YELLOW_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(YELLOW_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 180)
 
-RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Assets', 'B-14.png'))
+RED_SPACESHIP_IMAGE = pygame.image.load(os.path.join('Assets', 'A-02.png'))
 RED_SPACESHIP = pygame.transform.rotate(pygame.transform.scale(RED_SPACESHIP_IMAGE, (SPACESHIP_WIDTH, SPACESHIP_HEIGHT)), 180)
 
 SPACE = pygame.transform.scale(pygame.image.load(os.path.join('Assets', 'space.png')), (WIDTH, HEIGHT))
