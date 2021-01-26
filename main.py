@@ -74,13 +74,13 @@ def yellow_handle_movement(keys_pressed, yellow):
 
 def red_handle_movement(keys_pressed, red):            
         #RED SPACESHIP MOVEMENT
-        if keys_pressed[pygame.K_j] and red.x - VEL > 0:  #MOVE LEFT AND DON'T GO OFF SCREEN
+        if keys_pressed[pygame.K_a] and red.x - VEL > 0:  #MOVE LEFT AND DON'T GO OFF SCREEN
             red.x -= VEL
-        if keys_pressed[pygame.K_l] and red.x + VEL + red.width < WIDTH:  #MOVE RIGHT AND DON'T CROSS BORDER
+        if keys_pressed[pygame.K_d] and red.x + VEL + red.width < WIDTH:  #MOVE RIGHT AND DON'T CROSS BORDER
             red.x += VEL  
-        if keys_pressed[pygame.K_i] and red.y - VEL > 10:  #MOVE UP AND DON'T GO OFF SCREEN
+        if keys_pressed[pygame.K_w] and red.y - VEL > 10:  #MOVE UP AND DON'T GO OFF SCREEN
             red.y -= VEL      
-        if keys_pressed[pygame.K_k] and red.y + VEL + red.height < HEIGHT - 500:  #MOVE DOWN AND DON'T GO OFF SCREEN 
+        if keys_pressed[pygame.K_s] and red.y + VEL + red.height < HEIGHT - 500:  #MOVE DOWN AND DON'T GO OFF SCREEN 
             red.y += VEL
 
 def handle_bullets(yellow_bullets, red_bullets, yellow, red):
@@ -126,11 +126,11 @@ def main():
                 pygame.quit()
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_f and len(yellow_bullets) < MAX_BULLETS:
+                if event.key == pygame.K_RSHIFT and len(yellow_bullets) < MAX_BULLETS:
                     bullet = pygame.Rect(yellow.x + (yellow.width//2),yellow.y + yellow.height//2 -2, 10, 5)
                     yellow_bullets.append(bullet)
                     BULLET_FIRE_SOUND.play()
-                if event.key == pygame.K_h and len(red_bullets) < MAX_BULLETS:    
+                if event.key == pygame.K_f and len(red_bullets) < MAX_BULLETS:    
                     bullet = pygame.Rect(red.x, red.y + red.height//2 -2, 10, 5)
                     red_bullets.append(bullet)
                     BULLET_FIRE_SOUND.play() 
